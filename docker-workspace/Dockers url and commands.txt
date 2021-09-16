@@ -1,0 +1,54 @@
+-------------------------------------
+Docker Comands
+-------------------------------------
+-> docker run -p5000:5000 in28min/todo-rest-api-h2:1.0.0.RELEASE
+-> docker run -d -p5000:5000 in28min/todo-rest-api-h2:1.0.0.RELEASE (Detach Mode)
+-> docker logs 9c0d7907a628aba98c9d665542429678359051286ab05ac40f16f8a29fb55169 (check logs)
+-> docker logs -f 9c0d7907a628aba98c9d665542429678359051286ab05ac40f16f8a29fb55169 (tailing the logs)
+-> docker container ls (check all container which are running)
+-> docker run -p5001:5000 in28min/todo-rest-api-h2:1.0.0.RELEASE (to run another container if same image change port only)
+-> docker container ls -a (check all container which are running and stopped)
+-> docker stop container-id (to stop container which start or match with container-id)
+
+-> docker images (check all images)
+-> docker pull mysql (only download image)
+-> docker image history image-id (to check all the action done in image)
+-> docker image inspect image-id (to check metadata of image)
+-> docker image remove image-id (remove image from local)
+
+-> docker container run -p 5000:5000 in28min/todo-rest-api-h2:1.0.0.RELEASE (same as first command)
+-> docker container pause container-id (it will pause the container for accpeting request)
+-> docker container unpause container-id
+-> docker container inspect container-id (to check metadata of container)
+-> docker container ls (check all container which are running)
+-> docker container ls -a (check all container which are running and stopped)
+-> docker container prune (remove all stopped containers)
+-> docker stop container-id (to stop container which start or match with container-id)
+-> docker container kill container-id (to kill container)
+-> docker container run -p 5000:5000 -d --restart=always in28min/todo-rest-api-h2:1.0.0.RELEASE (default no to restart policy)
+-> docker container run -p 5000:5000 -d --restart=always in28min/todo-rest-api-h2:1.0.0.RELEASE (set always to restart container whenever docker desktop restart)
+
+
+-> docker events (print all the events happened in docker)
+-> docker top container-id
+-> docker stats (will show all the stats of container)
+-> docker run -d -p5000:5000 -m 512m --cpu-quota 50000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE (allocate 512mb memory and 5% of 100000 cpu)
+-> docker system df
+
+-> docker-compose --version
+-> docker-compose up (put docker-compose.yaml file and then run this command)
+
+-> docker run -p 9411:9411 openzipkin/zipkin:2.23
+-> docker run -p 8000:8000 in28min/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+
+-------------------------------------
+Docker urls
+-------------------------------------
+http://localhost:5000/hello-world
+
+
+
+
+
+
+
